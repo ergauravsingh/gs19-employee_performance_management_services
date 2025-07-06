@@ -3,29 +3,29 @@ package com.gaurav.employee.entity;
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import lombok.Data;
+import jakarta.persistence.Table;
 
 @Entity
-@Data
+@Table(name = "employee_project")
 public class EmployeeProject {
-
     @Id
-    private Long employeeId;
+    @GeneratedValue
+    private Long id;
 
-    @Id
-    private Long projectId;
+    @ManyToOne
+    @JoinColumn(name = "employee_id")
+    private Employee employee;
+
+    @ManyToOne
+    @JoinColumn(name = "project_id")
+    private Project project;
 
     private LocalDate assignedDate;
     private String role;
 
-    @ManyToOne
-    @JoinColumn(name = "employeeId", insertable = false, updatable = false)
-    private Employee employee;
-
-    @ManyToOne
-    @JoinColumn(name = "projectId", insertable = false, updatable = false)
-    private Project project;
+    // Getters and Setters
 }

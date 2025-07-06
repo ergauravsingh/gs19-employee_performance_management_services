@@ -5,20 +5,15 @@ import java.util.Set;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import lombok.Data;
+import jakarta.persistence.OneToMany;
 
 @Entity
-@Data
 public class Project {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id @GeneratedValue
     private Long id;
-
     private String name;
     private LocalDate startDate;
     private LocalDate endDate;
@@ -27,6 +22,8 @@ public class Project {
     @JoinColumn(name = "department_id")
     private Department department;
 
-    @ManyToMany(mappedBy = "projects")
-    private Set<Employee> employees;
+    @OneToMany(mappedBy = "project")
+    private Set<EmployeeProject> employeeProjects;
+
+    // Getters and Setters
 }
