@@ -1,31 +1,52 @@
 package com.gaurav.employee.entity;
 
 import java.time.LocalDate;
+import java.util.Objects;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "employee_project")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class EmployeeProject {
-    @Id
-    @GeneratedValue
-    private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+	@EmbeddedId
+	private EmployeeProjectId id;
 
-    @ManyToOne
-    @JoinColumn(name = "project_id")
-    private Project project;
+	@ManyToOne
+	@MapsId("employeeId")
+	@JoinColumn(name = "employee_id")
+	private Employee employee;
 
-    private LocalDate assignedDate;
-    private String role;
+	@ManyToOne
+	@MapsId("projectId")
+	@JoinColumn(name = "project_id")
+	private Project project;
 
-    // Getters and Setters
+	private LocalDate assignedDate;
+	private String role;
+
+	@Override
+	public boolean equals(Object o) {
+	    if (this == o) return true;
+	    if (!(o instanceof Project)) return false;
+	    EmployeeProject project = (EmployeeProject) o;
+	    return Objects.equals(id, project.id);
+	}
+
+	@Override
+	public int hashCode() {
+	    return Objects.hash(id);
+	}
+
 }
