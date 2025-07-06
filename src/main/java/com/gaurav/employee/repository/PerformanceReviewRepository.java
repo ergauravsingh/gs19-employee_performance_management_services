@@ -9,5 +9,5 @@ import com.gaurav.employee.entity.PerformanceReview;
 
 @Repository
 public interface PerformanceReviewRepository extends JpaRepository<PerformanceReview, Long> {
-    List<PerformanceReview> findTop3ByEmployeeIdOrderByReviewDateDesc(Long employeeId);
+	List<PerformanceReview> findTop3ByEmployeeIdOrderByReviewDateDesc(Long employeeId);
 }
