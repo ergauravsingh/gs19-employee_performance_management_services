@@ -15,8 +15,8 @@ INSERT INTO performance_review (id, employee_id, review_date, score, review_comm
 (1, 2, '2025-06-01', 88, 'Consistent performer.'),
 (2, 4, '2025-03-01', 92, 'Excellent progress.');
 
-INSERT INTO employee_project (employee_id, project_id) VALUES
-(1, 1),
-(2, 1),
-(3, 2),
-(4, 2);
+INSERT INTO employee_project (employee_id, project_id, assigned_date, role) VALUES
+(1, 1, '2025-01-01', 'Dev Lead'),
+(2, 1, '2025-01-01', 'Jr. Dev'),
+(3, 2, '2025-03-01', 'QA Lead'),
+(4, 2, '2025-03-01', 'Jr. QA');

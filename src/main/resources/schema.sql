@@ -37,6 +37,8 @@ CREATE TABLE performance_review (
 CREATE TABLE employee_project (
     employee_id INT,
     project_id INT,
+    assigned_date DATE,
+    role VARCHAR(255),
     PRIMARY KEY (employee_id, project_id),
     FOREIGN KEY (employee_id) REFERENCES employee(id),
     FOREIGN KEY (project_id) REFERENCES project(id)
