@@ -12,8 +12,12 @@ INSERT INTO employee (id, name, email, department_id, date_of_joining, salary, m
 (4, 'Bob Martin', 'bob@example.com', 2, '2024-01-20', 50000, 3);
 
 INSERT INTO performance_review (id, employee_id, review_date, score, review_comments) VALUES
-(1, 2, '2025-06-01', 88, 'Consistent performer.'),
-(2, 4, '2025-03-01', 92, 'Excellent progress.');
+(1, 2, '2025-02-01', 38, 'Under PIP.'),
+(2, 2, '2025-03-01', 58, 'Not Acceptable.'),
+(3, 2, '2025-04-01', 68, 'Need to work hard.'),
+(4, 2, '2025-05-01', 78, 'Can be a good performer.'),
+(5, 2, '2025-06-01', 88, 'Consistent performer.'),
+(6, 4, '2025-03-01', 92, 'Excellent progress.');
 
 INSERT INTO employee_project (employee_id, project_id, assigned_date, role) VALUES
 (1, 1, '2025-01-01', 'Dev Lead'),
