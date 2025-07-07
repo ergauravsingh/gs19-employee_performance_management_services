@@ -1,0 +1,79 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "employee_performance_management_services",
+    "dateExported": "2025-07-07T04:42:11.745Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "1c5d7625-fe9f-42a7-8972-a91ab1233e16",
+            "colId": "d1a798fa-5560-48d2-aaad-4d6b7ea9c601",
+            "containerId": "",
+            "name": "Search Employees Using Filters",
+            "url": "http://localhost:8080/employee-perf-mgmt/api/employees?reviewDate=2025-06-01",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2025-07-07T04:28:37.547Z",
+            "modified": "2025-07-07T04:37:21.728Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "reviewDate",
+                    "value": "2025-06-01",
+                    "isPath": false
+                },
+                {
+                    "name": "departments",
+                    "value": "Engineering",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "departments",
+                    "value": "Quality",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "departments",
+                    "value": "Engineering,Quality",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "projects",
+                    "value": "Mobile App",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "projects",
+                    "value": "Perf Testing",
+                    "isDisabled": true,
+                    "isPath": false
+                },
+                {
+                    "name": "projects",
+                    "value": "Mobile App,Perf Testing",
+                    "isDisabled": true,
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "2fa59a2a-ffa7-4181-9273-5eb4cfc562f8",
+            "colId": "d1a798fa-5560-48d2-aaad-4d6b7ea9c601",
+            "containerId": "",
+            "name": "Fetch Employee Details by ID",
+            "url": "http://localhost:8080/employee-perf-mgmt/api/employees/2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2025-07-07T04:38:26.035Z",
+            "modified": "2025-07-07T04:38:49.666Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
