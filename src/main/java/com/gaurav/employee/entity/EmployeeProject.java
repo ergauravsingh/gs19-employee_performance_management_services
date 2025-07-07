@@ -38,15 +38,17 @@ public class EmployeeProject {
 
 	@Override
 	public boolean equals(Object o) {
-	    if (this == o) return true;
-	    if (!(o instanceof Project)) return false;
-	    EmployeeProject project = (EmployeeProject) o;
-	    return Objects.equals(id, project.id);
+		if (this == o)
+			return true;
+		if (!(o instanceof EmployeeProject))
+			return false;
+		EmployeeProject project = (EmployeeProject) o;
+		return Objects.equals(id, project.id);
 	}
 
 	@Override
 	public int hashCode() {
-	    return Objects.hash(id);
+		return Objects.hash(id);
 	}
 
 }
