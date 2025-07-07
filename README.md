@@ -38,22 +38,22 @@ AND EMPLOYEE.ID = PERFORMANCE_REVIEW.EMPLOYEE_ID
 
 ##### Application Screenshots:
 
-![Swagger Documentation](resources/screenshots/swaggerdocs.JPG)
+![Swagger Documentation](src/main/resources/screenshots/swaggerdocs.JPG)
 *Employee Performance Management System - API Documentation*
 
 ---
 
-![Employee Details](resources/screenshots/employeedetails.JPG)
+![Employee Details](src/main/resources/screenshots/employeedetails.JPG)
 *Fetch Employee details using ID*
 
 ---
 
-![Search by reviewDate](resources/screenshots/searchbyreviewdate.JPG)
+![Search by reviewDate](src/main/resources/screenshots/searchbyreviewdate.JPG)
 *Get employee details using reviewDate filter*
 
 ---
 
-![Search without filters](resources/screenshots/searchwithoutfilters.JPG)
+![Search without filters](src/main/resources/screenshots/searchwithoutfilters.JPG)
 *Get employee details without using any filter*
 
 ---
